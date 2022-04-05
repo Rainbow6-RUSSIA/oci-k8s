@@ -24,10 +24,8 @@ module "compute" {
   availability_domain = 0
 
   leader = {
-    shape = "VM.Standard.A1.Flex"
-    image = "Canonical-Ubuntu-20.04-aarch64-2021.12.01-0"
-    # shape = "VM.Standard.E2.1.Micro"
-    # image = "Canonical-Ubuntu-20.04-2021.12.01-0"
+    shape            = var.compute_shape
+    image            = var.os_image
     ocpus            = 1
     memory_in_gbs    = 3
     hostname         = "leader"
@@ -35,11 +33,9 @@ module "compute" {
     assign_public_ip = true
   }
   workers = {
-    count = 3
-    shape = "VM.Standard.A1.Flex"
-    image = "Canonical-Ubuntu-20.04-aarch64-2021.12.01-0"
-    # shape = "VM.Standard.E2.1.Micro"
-    # image = "Canonical-Ubuntu-20.04-2021.12.01-0"
+    count            = 3
+    shape            = var.compute_shape
+    image            = var.os_image
     ocpus            = 1
     memory_in_gbs    = 7
     base_hostname    = "worker"

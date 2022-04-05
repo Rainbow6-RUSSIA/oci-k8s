@@ -27,3 +27,13 @@ variable "debug_create_cluster_admin" {
   type    = bool
   default = false
 }
+
+variable "os_image" {
+  type    = string
+  default = "Canonical-Ubuntu-20.04-aarch64-2022.03.02-0"
+}
+
+variable "compute_shape" {
+  type    = string
+  default = "VM.Standard.A1.Flex"
+}

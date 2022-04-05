@@ -23,3 +23,6 @@ debug_create_cluster_admin = false
 # Whether existing local kube config (%USERPROFILE%\.kube\config)
 # should be overwritten with the one from the newly created cluster.
 windows_overwrite_local_kube_config = false
+
+# os_image      = "Canonical-Ubuntu-20.04-aarch64-2022.03.02-0"
+# compute_shape = "VM.Standard.A1.Flex"
